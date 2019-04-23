@@ -7,7 +7,7 @@ from . import views
 app_name = 'minerals'
 
 urlpatterns = [
-    #url(r'^favicon.ico$', RedirectView.as_view(url='/static/favicon/favicon.ico')),
+    url(r'^favicon.ico$', RedirectView.as_view(url='/static/favicon.ico')),
     path('', views.mineral_list, name='mineral_list'),
     path('<int:pk>', views.mineral_detail, name='detail'),
     path('random/<int:pk>', views.mineral_random, name='random'),
